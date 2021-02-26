@@ -1,0 +1,12 @@
+# ignore terraform from git
+infra/*/*/*/.terraform/*
+infra/*/*/*/*.tfstate
+infra/*/*/*/*.tfstate.*
+infra/*/*/*/crash.log
+infra/*/*/*/*.tfvars
+infra/*/*/*/override.tf
+infra/*/*/*/override.tf.json
+infra/*/*/*/*_override.tf
+infra/*/*/*/*_override.tf.json
+infra/*/*/*/.terraformrc
+infra/*/*/*/terraform.rc
