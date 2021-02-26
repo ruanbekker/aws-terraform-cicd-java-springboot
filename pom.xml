@@ -12,7 +12,7 @@
     <name>helloworld</name>
     <description>Hello World Example</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>15</java.version>
     </properties>
     <dependencies>
         <dependency>
