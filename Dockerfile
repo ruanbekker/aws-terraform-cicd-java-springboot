@@ -1,7 +1,9 @@
 FROM maven:3.6.3-openjdk-15 as builder
 WORKDIR /app
 COPY . /app
-RUN mvn package
+# https://aboullaite.me/speed-up-your-java-application-images-build-with-buildkit/
+#RUN --mount=type=cache,target=/root/.m2 mvn package
+RUN --mount=type=cache,target=/root/.m2 mvn clean install
 
 FROM adoptopenjdk:15-jre-hotspot
 WORKDIR /app

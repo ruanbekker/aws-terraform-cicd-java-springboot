@@ -1,0 +1,46 @@
+version: "3.8"
+
+services: 
+  app:
+    build: 
+      context: .
+      dockerfile: ./Dockerfile 
+    container_name: app
+    depends_on: 
+      - db
+    environment: 
+      - M2_HOME=/root/.m2
+      - MYSQL_HOST=db
+      - MYSQL_USER=root
+      - MYSQL_PASS=password
+      - MYSQL_DATABASE=cargarage
+    networks: 
+      - app 
+    ports:
+      - 8080:8080
+    volumes:
+      - $HOME/.m2:/root/.m2
+    restart: unless-stopped
+
+  db:
+    image: mysql:8.0
+    container_name: db
+    environment: 
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_USERNAME=app
+      - MYSQL_PASSWORD=app
+      - MYSQL_DATABASE=cargarage
+      - MYSQL_ROOT_HOST=%
+    networks: 
+      - app
+    ports:
+      - 3306:3306
+    volumes: 
+      - dbdata:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+
+networks: 
+  app: {} 
+
+volumes: 
+  dbdata: {}
