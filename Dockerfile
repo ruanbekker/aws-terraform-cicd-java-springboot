@@ -1,7 +1,7 @@
 FROM adoptopenjdk/maven-openjdk11 as builder
 WORKDIR /app
 COPY . /app 
-RUN --mount=type=cache,target=/root/.m2 mvn clean install 
+RUN mvn clean install 
 
 FROM adoptopenjdk:11-jre-hotspot
 WORKDIR /app
