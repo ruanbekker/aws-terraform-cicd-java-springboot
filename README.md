@@ -424,6 +424,10 @@ $ docker-compose down
 
 - [Difference between Task Role and Execution Role](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TaskDefinition.html)
 
+### Terraform Resources
+
+- [Shunit Tests for User Data](https://alexharv074.github.io/2020/01/31/unit-testing-a-terraform-user_data-script-with-shunit2.html)
+
 ### Java Resources
 - [spring-testing-separate-data-source](https://www.baeldung.com/spring-testing-separate-data-source) and [github](https://github.com/eugenp/tutorials/tree/master/persistence-modules/spring-boot-persistence)
 - [testing-with-configuration-classes-and-profiles](https://spring.io/blog/2011/06/21/spring-3-1-m2-testing-with-configuration-classes-and-profiles)
