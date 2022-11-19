@@ -11,3 +11,5 @@ infra/*/*/*/*_override.tf.json
 infra/*/*/*/.terraformrc
 infra/*/*/*/terraform.rc
 infra/*/*/*/.terraform.lock.hcl
+# ignore target jar
+target/*
