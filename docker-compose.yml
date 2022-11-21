@@ -33,8 +33,6 @@ services:
       - MYSQL_ROOT_HOST=%
     networks: 
       - app
-    ports:
-      - 3306:3306
     volumes: 
       - dbdata:/var/lib/mysql
     command: --default-authentication-plugin=mysql_native_password
